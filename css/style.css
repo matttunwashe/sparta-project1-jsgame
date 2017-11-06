@@ -22,7 +22,10 @@ body {
   background-color: blue;
   border: 2px solid black;
 }
+.bottom-row{
+  height: 770px;
+  background-color: green;
+}
 .row{
   height: 50px;
-  background-color: green;
 }
