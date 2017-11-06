@@ -1,5 +1,5 @@
 body {
-  background-color: white;
+  background-color: blue;
   /*border: 2px solid black;*/
 }
 /*.row{
@@ -12,11 +12,17 @@ body {
 .top-left{
   background-color: red;
   border: 2px solid black;
+
+}
+.middle{
+  background-color: white;
+  border: 2px solid black;
 }
 .top-right{
   background-color: blue;
   border: 2px solid black;
 }
-/*.row{
-  height: 500px;
-}*/
+.row{
+  height: 50px;
+  background-color: green;
+}
