@@ -1,0 +1,22 @@
+body {
+  background-color: white;
+  /*border: 2px solid black;*/
+}
+/*.row{
+    height: 30px;
+    border: 6px;
+    border-color: blue;
+    text-align: center;
+    border: 2px solid black;
+}*/
+.top-left{
+  background-color: red;
+  border: 2px solid black;
+}
+.top-right{
+  background-color: blue;
+  border: 2px solid black;
+}
+/*.row{
+  height: 500px;
+}*/
