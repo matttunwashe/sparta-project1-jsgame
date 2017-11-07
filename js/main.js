@@ -2,19 +2,26 @@ $( document ).ready(function() {
 
   console.log('working');
 
+  // var movementOptions = ["margin-top", "margin-left", "margin-right","margin-bottom"]
+
   $("#start").click( function(){
 
     $(this).fadeOut();
   //the countdown timer
     function countdown() {
+
+    // $(this).fadeIn();
       var timer = setInterval(function() {
       var count = parseInt($('#timer').html());
       if (count !== 0) {
         $('#timer').html(count - 1);
       } else {
-        clearInterval(timer);
+          alert("Your score is" + score);
       }
     }, 1000);
+
+
+
     }
 
     countdown();
@@ -27,25 +34,19 @@ $( document ).ready(function() {
   //clicker button increments
     var score = 0;
     $("#clicker").click(function () {
+
       score = score + 1;
       // console.log(score);
       $("#count").html(score);
 
-      $(this).animate({
-        marginLeft: x + 'px'
-      })
+      var x = Math.floor(Math.random()*300);
+      var y = Math.floor(Math.random()*300);
 
-    })
+      $("#clicker").css('margin-top', (x + "px"))
+      $("#clicker").css('margin-left', (y + "px"))
 
-  //make the clicker move randomly
-  // var move = document.getElementById('#clicker');
-  //
-  // move.onclick=function(){
-  //   var x = Math.floor(Math.random()*1000);
-  //   var y = Math.floor(Math.random()*1000);
-  //   move.style.top = x + 'px';
-  //   move.style.left = y + 'px';
-  // };
+    });
+
 
 
 

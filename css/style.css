@@ -29,8 +29,12 @@ body {
 .row{
   height: 50px;
 }
-.btn{
+#clicker{
   margin-left: 650px;
   margin-top: 250px;
-  //style the movement of the button
+  cursor: pointer;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  transition: all 1s;
 }
