@@ -1,5 +1,5 @@
 body {
-  background-color: blue;
+  background-color: black;
   /*border: 2px solid black;*/
 }
 /*.row{
@@ -24,8 +24,12 @@ body {
 }
 .bottom-row{
   height: 770px;
-  background-color: green;
+  background-color: black;
 }
 .row{
   height: 50px;
+}
+.btn{
+  margin-left: 650px;
+  margin-top: 250px;
 }
