@@ -2,6 +2,10 @@ $( document ).ready(function() {
 
   console.log('working');
 
+$("#start").click( function(){
+
+
+//the countdown timer
   function countdown() {
     var timer = setInterval(function() {
     var count = parseInt($('#timer').html());
@@ -24,13 +28,16 @@ countdown();
     $("#count").html(score);
   })
 
+//make the clicker move randomly
+var move = document.getElementById('#clicker');
+
+move.onclick=function(){
+  var x = Math.floor(Math.random()*1000);
+  var y = Math.floor(Math.random()*1000);
+  move.style.top = x + 'px';
+  move.style.left = y + 'px';
+};
+
 });
 
-
-
-//var count = document.getElementById('countdown');
-// timeoutfn = function(){
-//        count.innerHTML = parseInt(count.innerHTML) - 1;
-//        setTimeout(timeoutfn, 1000);
-// };
-// setTimeout(timeoutfn, 1000);
+})
