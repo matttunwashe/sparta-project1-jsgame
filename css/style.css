@@ -23,13 +23,17 @@ body {
   border: 2px solid black;
 }
 .bottom-row{
-  height: 770px;
+  position: fixed;
   background-color: black;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
 }
 .row{
   height: 50px;
 }
-#clicker{
+.btn{
   margin-left: 650px;
   margin-top: 250px;
   cursor: pointer;
@@ -37,4 +41,10 @@ body {
   top: 50px;
   left: 50px;
   transition: all 1s;
+}
+#clicker{
+  overflow: hidden;
+}
+.container{
+  position:relative;
 }

@@ -2,15 +2,15 @@ $( document ).ready(function() {
 
   console.log('working');
 
-  // var movementOptions = ["margin-top", "margin-left", "margin-right","margin-bottom"]
-
+//start button
   $("#start").click( function(){
 
+//start button fades out
     $(this).fadeOut();
+
   //the countdown timer
     function countdown() {
 
-    // $(this).fadeIn();
       var timer = setInterval(function() {
       var count = parseInt($('#timer').html());
       if (count !== 0) {
@@ -20,10 +20,7 @@ $( document ).ready(function() {
       }
     }, 1000);
 
-
-
     }
-
     countdown();
 
     var x = 100;
@@ -36,19 +33,18 @@ $( document ).ready(function() {
     $("#clicker").click(function () {
 
       score = score + 1;
-      // console.log(score);
       $("#count").html(score);
 
-      var x = Math.floor(Math.random()*300);
-      var y = Math.floor(Math.random()*300);
-
+//the clicker moves randomly
+      var x = Math.floor(Math.random()*725);
+      var y = Math.floor(Math.random()*1000);
       $("#clicker").css('margin-top', (x + "px"))
       $("#clicker").css('margin-left', (y + "px"))
+      $("#clicker").css('margin-right', (y + "px"))
+      $("#clicker").css('margin-bottom', (x + "px"))
+
 
     });
-
-
-
 
   });
 
