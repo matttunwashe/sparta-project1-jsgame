@@ -8,6 +8,10 @@ $( document ).ready(function() {
 //start button fades out
     $(this).fadeOut();
 
+// function Player1() {
+//
+// }
+
   //the countdown timer
     function countdown() {
 
@@ -16,7 +20,7 @@ $( document ).ready(function() {
       if (count !== 0) {
         $('#timer').html(count - 1);
       } else {
-          alert("Your score is" + score);
+          alert("Game over! Your score is - " + score);
       }
     }, 1000);
 

@@ -1,38 +1,26 @@
 body {
   background-color: black;
-  /*border: 2px solid black;*/
 }
-/*.row{
-    height: 30px;
-    border: 6px;
-    border-color: blue;
-    text-align: center;
-    border: 2px solid black;
-}*/
+
 .top-left{
   background-color: red;
   border: 2px solid black;
-
 }
+
 .middle{
   background-color: white;
   border: 2px solid black;
 }
+
 .top-right{
   background-color: blue;
   border: 2px solid black;
 }
-.bottom-row{
-  position: fixed;
-  background-color: black;
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-}
+
 .row{
   height: 50px;
 }
+
 .btn{
   margin-left: 650px;
   margin-top: 250px;
@@ -41,10 +29,4 @@ body {
   top: 50px;
   left: 50px;
   transition: all 1s;
-}
-#clicker{
-  overflow: hidden;
-}
-.container{
-  position:relative;
 }
