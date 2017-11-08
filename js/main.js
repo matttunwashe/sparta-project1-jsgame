@@ -1,43 +1,38 @@
 $( document ).ready(function() {
 
-var player1Score = 0;
-var player2Score = 0;
-//setting the welcome message
-function welcomeMessage(){
-  alert("Welcome to my game");
-}
-
-//keep scores and displays it
-function playGame(numOfRounds) {
-  welcomeMessage();
-  do {
-    var player1 = playerOne();
-    var player2 = playerTwo();
-    var result = comparePlay(player1, player2);
-    updateScores(result, 1);
-    if(result !== 0) {
-      numOfRounds--;
-    }
-  }while(numOfRounds > 0);
-  if (player1Score > player2Score) {
-    alert("Player 1 has " + player1Score + "points compared to player 2's  " + player2Score + "points. So player 1 wins!")
-  } else {
-    alert("Player 2 has " + player2Score + "points compared to player 1's  " + player1Score + "points. So player 2 wins");
+  //movement variables
+  var x = 100;
+  var y = 100;
+  var score = 0;
+  var player1Score = 0;
+  var player2Score = 0;
+  //setting the welcome message
+  function welcomeMessage(){
+    alert("Welcome to my game");
   }
 
-clearScores();
+  //keep scores and displays it
+  function playGame(numOfRounds) {
+    welcomeMessage();
+    do {
+      var player1 = playerOne();
+      var player2 = playerTwo();
+      var result = compareGuesses(player1, player2);
+      updateScores(result, 1);
+      if(result !== 0) {
+        numOfRounds--;
+      }
+    }while(numOfRounds > 0);
+    if (player1Score > player2Score) {
+      alert("Player 1 has " + player1Score + "points compared to player 2's  " + player2Score + "points. So player 1 wins!")
+    } else {
+      alert("Player 2 has " + player2Score + "points compared to player 1's  " + player1Score + "points. So player 2 wins");
+    }
 
-//clears scores after the game finishes
-function clearScores() {
-  player1Score = 0;
-  player2Score = 0;
-}
 
+  }
 
-
-}
-
-//start button
+  //start button
   $("#start").click( function(){
 
   //start button fades out
@@ -50,17 +45,19 @@ function clearScores() {
         if (count !== 0) {
           $('#timer').html(count - 1);
         } else {
-          alert("Game over! Your score is " + score);
+          // alert("Game over! Your score is " + score);
+          if (player1Score !== 0) {
+            $('#player2Score').html(score);
+          } else {
+            $('#player1Score').html(score);            
+          }
           clearInterval(timer);
         }
       }, 1000);
     }
     countdown();
 
-    //movement variables
-    var x = 100;
-    var y = 100;
-    var score = 0;
+
 
     // Write a player two function to run the game for player 2
     // At the end of it, save score in player2Score variable
@@ -71,7 +68,6 @@ function clearScores() {
 
     function playerOne(){
       //clicker button increments
-
       var scoreBoard = $('#score');
 
       $("#clicker").click(function () {
@@ -90,10 +86,39 @@ function clearScores() {
       // Now call player 2 function
     }
 
+    function playerTwo() {
+      //clicker button increments
+
+      var scoreBoard = $('#score');
+
+      $("#clicker").click(function () {
+        score = score + 1;
+        scoreBoard.html(score);
+
+        //the clicker moves randomly
+        var x = Math.floor(Math.random()*725);
+        var y = Math.floor(Math.random()*1000);
+          $("#clicker").css('margin-top', (x + "px"))
+          $("#clicker").css('margin-left', (y + "px"))
+          $("#clicker").css('margin-right', (y + "px"))
+          $("#clicker").css('margin-bottom', (x + "px"))
+      });
+      player2Score = score;
+      // Now call player 2 function
+    }
+
+    function compareWins(player1Score, player2Score) {
+      if (player1Score > player2Score){
+        alert("Player 1 wins " + player1Score)
+      } else {
+        alert("Player 2 wins" + player2Score)
+      }
+    }
 
 
 
-playerOne();
+  playerOne();
+  playerTwo();
   });
 
   //states how many round the game should run for.
