@@ -21,23 +21,30 @@
         <div class="col-md-4 middle">
           <div class="row">
             <div class="col-md-6">
-              <p >Player 1: <span id="player1Score"></span></p>
-              <p >Player 2: <span id="player2Score"></span></p>
+              <strong>Player 1 Score:</strong><span id="score">0</span>
             </div>
-            <div class="col-md-6">
-              <strong>Count Metre:</strong><span id="score">0</span>
+            <div>
+              <strong>Player 2 Score:</strong><span id="score2">0</span>
             </div>
           </div>
         </div>
+        <!-- Timer -->
         <div class="col-md-4 top-right">
-          <strong>Time:</strong><span id="timer"> 3</span>
+          <div class="row">
+            <div class="col-md-6">
+              <strong>Time:</strong><span id="timer"> 4</span>
+            </div>
+            <div>
+              <strong>Time:</strong><span id="timer2"> 4</span>
+            </div>
+          </div>
         </div>
-      </div>
       <div class="bottom-row">
-      <div class="col-md-12 main">
-      </div>
-        <button type="button" id="clicker" class="btn btn-outline-success">Clicker</button>
-        <button type="button" id="start" name="button" class="btn btn-secondary">Start Game</button>
+      <div class="col-md-12 main"></div>
+      <!-- Buttons -->
+      <button type="button" id="clicker" class="btn btn-outline-success">Player 1</button>
+      <button type="button" id="clicker2" class="btn btn-outline-success">Player 2</button>
+      <button type="button" id="start" name="button" class="btn btn-secondary">Start Game</button>
     </div>
     </div>
   </body>
