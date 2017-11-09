@@ -53,7 +53,7 @@ Game includes:
 
 
   ***Wireframe***
-![Alt ](engineering/gameWireframe.png.jpg "Optional Title")
+![Alt ](./images/Wireframe.png)
 
 ***Game screenshot***
-![Alt Image Text](file:///Users/Tech-A20/Desktop/Screen%20Shot%202017-11-09%20at%2022.34.35.png)
+![Alt Image Text](f./images/gameScreenshot.png)
