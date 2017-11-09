@@ -1,5 +1,6 @@
 $( document ).ready(function() {
 
+
   //movement variables
   var x = 100;
   var y = 100;
@@ -12,9 +13,14 @@ $( document ).ready(function() {
   $('#clicker2').hide();
   //setting the welcome message
   function welcomeMessage(){
-    alert("Welcome to my game");
+    $('#myModal').show();
   }
-      welcomeMessage();
+
+  $('#myModalClose').click(function(){
+    $('#myModal').hide();
+  })
+
+  welcomeMessage();
 
   //start button
   $("#start").click( function(){
@@ -33,6 +39,7 @@ $( document ).ready(function() {
         countdownTwo();
         playerTwo();
         player2Turn = false;
+
       }
     }
 
@@ -109,11 +116,13 @@ $( document ).ready(function() {
       });
     }
 
-    function checkForWin(score, score2) {
+    function checkForWin() {
       if (score > score2){
-        alert("Player 1 wins " + score);
-      } else {
-        alert("Player 2 wins" + score2);
+        alert("Player 1 wins");
+      } else if (score < score2){
+        alert("Player 2 wins");
+      } else if (score = score2) {
+        alert("It's a draw")
       }
     }
 
