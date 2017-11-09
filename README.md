@@ -1,4 +1,5 @@
 # Rapid Clicker
+_
 This game is a 2 player game that tests how fast you can click on the clicker. The clicker has been designed to move randomly which makes it more tricky to click.
 
 *** Introduction to Rapid Clicker. ***
@@ -49,3 +50,10 @@ Game includes:
 **Difficulties**
   * I got the game mechanics done in time but really struggled in implementing a 2 player game.
   * I also find it really difficult to include a timer for both players.
+
+
+  ***Wireframe***
+![Alt ](engineering/gameWireframe.png.jpg "Optional Title")
+
+***Game screenshot***
+![Alt Image Text](file:///Users/Tech-A20/Desktop/Screen%20Shot%202017-11-09%20at%2022.34.35.png)
