@@ -6,38 +6,30 @@ $( document ).ready(function() {
   var score = 0;
   var player1Score = 0;
   var player2Score = 0;
+  player1Turn = true;
+  player2Turn = false;
   //setting the welcome message
   function welcomeMessage(){
     alert("Welcome to my game");
   }
 
-  //keep scores and displays it
-  function playGame(numOfRounds) {
-    welcomeMessage();
-    do {
-      var player1 = playerOne();
-      var player2 = playerTwo();
-      var result = compareGuesses(player1, player2);
-      updateScores(result, 1);
-      if(result !== 0) {
-        numOfRounds--;
-      }
-    }while(numOfRounds > 0);
-    if (player1Score > player2Score) {
-      alert("Player 1 has " + player1Score + "points compared to player 2's  " + player2Score + "points. So player 1 wins!")
-    } else {
-      alert("Player 2 has " + player2Score + "points compared to player 1's  " + player1Score + "points. So player 2 wins");
-    }
-
-
-  }
-
   //start button
   $("#start").click( function(){
+    welcomeMessage();
 
   //start button fades out
     $(this).fadeOut();
 
+    function init() {
+      countdown();
+      if(!$('#player1Score').html()) {
+        playerOne();
+      } else {
+        playerTwo();
+      }
+    }
+
+    init();
   //the countdown timer
     function countdown() {
       var timer = setInterval(function() {
@@ -49,13 +41,25 @@ $( document ).ready(function() {
           if (player1Score !== 0) {
             $('#player2Score').html(score);
           } else {
-            $('#player1Score').html(score);            
+            $('#player1Score').html(score);
           }
           clearInterval(timer);
+
+          // Bring back start button
+          // For Player 2
+
+          // $("#start").fadeIn();
+
+          if (player1Turn = true) {
+
+          } else {
+
+          }
+
         }
       }, 1000);
     }
-    countdown();
+
 
 
 
@@ -83,8 +87,12 @@ $( document ).ready(function() {
           $("#clicker").css('margin-bottom', (x + "px"))
       });
       player1Score = score;
+
       // Now call player 2 function
     }
+
+
+
 
     function playerTwo() {
       //clicker button increments
@@ -107,21 +115,48 @@ $( document ).ready(function() {
       // Now call player 2 function
     }
 
-    function compareWins(player1Score, player2Score) {
-      if (player1Score > player2Score){
-        alert("Player 1 wins " + player1Score)
-      } else {
-        alert("Player 2 wins" + player2Score)
-      }
-    }
+    // function playerTurn(player1Score, player2Score) {
+    //   if (playerOne > playerTwo){
+    //     ////playerTwo turn to playerTwo
+    //
+    //
+    //
+    //
+    //
+    //   }
+    // }
+
+    // function compareWins(player1Score, player2Score) {
+    //   if (player1Score > player2Score){
+    //     alert("Player 1 wins " + player1Score)
+    //   } else {
+    //     alert("Player 2 wins" + player2Score)
+    //   }
+    // }
 
 
 
-  playerOne();
-  playerTwo();
+  // playerTwo();
   });
 
   //states how many round the game should run for.
-  // playGame(1);
+  // playGame();
 
 })
+
+// Create variables for player1turn and player2turn
+// player1turn = true player2turn = false
+
+// In the countdown function, have it do an if else statement
+// to check whose turn it is
+// IF it's player one's turn: add to player1score id span
+// AND THEN when time is up:
+// Save what's in player1score into a variable called player1score
+// AND THEN set player1turn to false and player2turn to true
+// AND THEN call the countdown function again
+
+// When countdown clals again, it'll go to the else statement
+// In the else statement, have it now add to player2Score id span
+// AND THEN when time is up:
+// Save what's in player2score into a varaible called player2Score
+// AND THEN: Call the check for win function
