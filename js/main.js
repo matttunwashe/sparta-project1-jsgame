@@ -1,23 +1,19 @@
 $( document ).ready(function() {
-
-
   //movement variables
   var x = 100;
   var y = 100;
   var score = 0;
   var score2 = 0;
-  // var player1Score = 0;
-  // var player2Score = 0;
   var player1Turn = true;
   var player2Turn = false;
-  $('#clicker2').hide();
+    $('#clicker2').hide();
   //setting the welcome message
   function welcomeMessage(){
-    $('#myModal').show();
+    $('#introModal').show();
   }
 
-  $('#myModalClose').click(function(){
-    $('#myModal').hide();
+  $('#introModalClose').click(function(){
+    $('#introModal').hide();
   })
 
   welcomeMessage();
@@ -36,7 +32,7 @@ $( document ).ready(function() {
         $('#clicker2').attr('id', 'clicker');
       } else {
         changePlayer();
-        countdownTwo();
+
         playerTwo();
         player2Turn = false;
 
@@ -61,8 +57,15 @@ $( document ).ready(function() {
     }
 
     function changePlayer(){
-      alert("Player 2 ready");
+      $('#changePlayerModal').show();
+      $('#changePlayerModalClose').click(function(){
+        $('#changePlayerModal').hide();
+        countdownTwo();
+      })
     }
+
+
+
 
     function countdownTwo() {
       var timer2 = setInterval(function() {
@@ -115,16 +118,24 @@ $( document ).ready(function() {
           $("#clicker2").css('margin-bottom', (x + "px"))
       });
     }
-
+    //this checks if it's a win or draw
     function checkForWin() {
       if (score > score2){
-        alert("Player 1 wins");
+        $('#player1WinModal').show();
+        $('#player1WinModalClose').click(function(){
+          $('#player1WinModal').hide();
+        });
       } else if (score < score2){
-        alert("Player 2 wins");
+        $('#player2WinModal').show();
+        $('#player2WinModalClose').click(function(){
+          $('#player2WinModal').hide();
+        });
       } else if (score = score2) {
-        alert("It's a draw")
+        $('#drawModal').show();
+        $('#drawModalClose').click(function(){
+        $('#drawModal').hide();
+        });
       }
     }
-
   });
 })

@@ -47,24 +47,70 @@
         <button type="button" id="start" name="button" class="btn btn-secondary">Start Game</button>
       </div>
     </div>
-
-    <div id="myModal" class="modal" tabindex="-1" role="dialog">
+<!-- Welcome message modal -->
+    <div id="introModal" class="modal" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Modal title</h5>
-            <button id="myModalClose"  type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <h5 class="modal-title">Rapid Clicker</h5>
+            <button id="introModalClose"  type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
-          </div>
-          <div class="modal-body">
-            <p>Rapid Clicker</p>
-          </div>
-          <div class="modal-footer">
           </div>
         </div>
       </div>
     </div>
-
+<!-- Player 2 Modal -->
+<div id="changePlayerModal" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Player 2 Ready</h5>
+        <button id="changePlayerModalClose"  type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- Player1 wins modal -->
+    <div id="player1WinModal" class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Player 1 Wins</h5>
+            <button id="player1WinModalClose"  type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Player2 wins Modal -->
+    <div id="player2WinModal" class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Player 2 Wins</h5>
+            <button id="player2WinModalClose"  type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Draw Modal -->
+    <div id="drawModal" class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">It's a draw!</h5>
+            <button id="drawModalClose"  type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
