@@ -67,7 +67,7 @@ $( document ).ready(function() {
         }
     }, 1000);
   }
-  //player1 moves 
+  //player1 moves
   function playerOne(){
     var scoreBoard = $('#score');
       $("#clicker").click(function () {
