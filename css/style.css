@@ -1,26 +1,21 @@
 body {
   background-color: black;
 }
-
 .top-left{
   background-color: red;
   border: 2px solid black;
 }
-
 .middle{
   background-color: white;
   border: 2px solid black;
 }
-
 .top-right{
   background-color: blue;
   border: 2px solid black;
 }
-
 .row{
-  height: 50px;
+  height: 80px;
 }
-
 .btn{
   margin-left: 650px;
   margin-top: 250px;

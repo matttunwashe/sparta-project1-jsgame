@@ -8,23 +8,109 @@
       src="https://code.jquery.com/jquery-3.2.1.min.js"
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
       crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="./css/style.css">
     <script type="text/javascript" src="js/main.js"></script>
   </head>
   <body>
     <div class="container-fluid">
       <div class="row top-row">
-        <div class="col-md-4 top-left">Scores</div>
-        <div class="col-md-4 middle">Count Metre:<span id="count">0</span></div>
-        <div class="col-md-4 top-right">Time:<span id="timer"> 60</span></div>
-      </div>
+        <div class="col-md-4 top-left">
+          <strong>Instructions:</strong> Simply click on the clicker rapidly!
+        </div>
+        <div class="col-md-4 middle">
+          <div class="row">
+            <div class="col-md-6">
+              <strong>Player 1 Score:</strong><span id="score">0</span>
+            </div>
+            <div>
+              <strong>Player 2 Score:</strong><span id="score2">0</span>
+            </div>
+          </div>
+        </div>
+        <!-- Timer -->
+        <div class="col-md-4 top-right">
+          <div class="row">
+            <div class="col-md-6">
+              <strong>Time:</strong><span id="timer"> 30</span>
+            </div>
+            <div>
+              <strong>Time:</strong><span id="timer2"> 30</span>
+            </div>
+          </div>
+        </div>
       <div class="bottom-row">
-      <div class="col-md-12 main">
-      </div>
-        <button type="button" id="clicker" class="btn btn-outline-success">Clicker</button>
+        <div class="col-md-12 main"></div>
+        <!-- Player1 and Player2 Buttons -->
+        <button type="button" id="clicker" class="btn btn-outline-success">Player 1</button>
+        <button type="button" id="clicker2" class="btn btn-outline-success">Player 2</button>
+        <!-- Start Game button -->
         <button type="button" id="start" name="button" class="btn btn-secondary">Start Game</button>
+      </div>
     </div>
+<!-- Welcome message modal -->
+    <div id="introModal" class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Rapid Clicker</h5>
+            <button id="introModalClose"  type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- Player 2 Modal -->
+<div id="changePlayerModal" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Player 2 Ready</h5>
+        <button id="changePlayerModalClose"  type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- Player1 wins modal -->
+    <div id="player1WinModal" class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Player 1 Wins</h5>
+            <button id="player1WinModalClose"  type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Player2 wins Modal -->
+    <div id="player2WinModal" class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Player 2 Wins</h5>
+            <button id="player2WinModalClose"  type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Draw Modal -->
+    <div id="drawModal" class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">It's a draw!</h5>
+            <button id="drawModalClose"  type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
