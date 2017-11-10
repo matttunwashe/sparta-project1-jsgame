@@ -53,7 +53,9 @@ Game includes:
 
 
   ***Wireframe***
-![Alt ](./images/gameWireframe.png)
+
+![](./images/gameWireframe.png)
 
 ***Trello***
-![Alt Image Text](./images/rapidClickerTrello.png)
+
+![](./images/rapidClickerTrello.png)
